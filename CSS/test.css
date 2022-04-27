@@ -1,0 +1,122 @@
+body {
+    background-color: rgb(5, 82, 56);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.navigation{
+    margin: 20px 10px;
+}
+.navigation>li{
+    float: left;
+    list-style: none;
+}
+.navigation>li>a{
+    background: #004b98;
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.navigation>li>a:hover{
+    background: #0096d4;
+}
+.navigation>li:first-child>a{
+    border-radius: 30px 0 0 30px;
+}
+
+.navigation>li:last-child>a{
+    border-radius: 0px 30px 30px 0px;
+}
+.navigation2>li{
+    display: inline-block;
+    padding: 7px;
+}
+.navigation2>li>a{
+    text-decoration: none;
+    padding-bottom: 4px;
+    color: #666;
+}
+.navigation2>li>a:hover{
+    border-bottom: 2px rgb(151, 24, 9);
+    color: #000;
+}
+
+
+
+.urun{
+    text-align: center;
+    margin: 20vh auto 20vh auto;
+}
+.urun>h1{
+    color: #00FFB6;
+    font-weight: 300;
+}
+.urun-kutusu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'poppins';
+}
+.kart-p{
+    background: #fff;
+    color: #000;
+    margin: 20px;
+    width: 20vw;
+}
+.img-urun{
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-urun1{
+    background-image: url(https://productimages.hepsiburada.net/l/51/1000/11054390771762.jpg);
+    align-items: center;
+    justify-content: center;
+    width: 40vh;
+    height: 30vh;
+}
+.img-urun2{
+    background-image: url(https://i.hizliresim.com/5jxtksb.jpg);
+    align-items: center;
+    justify-content: center;
+    width: 30vh;
+    height: 30vh;
+}
+.img-urun3{
+    background-image: url(https://i.hizliresim.com/67phydo.jfif);
+    align-items: center;
+    width: 30vh;
+    height: 30vh;
+}
+.img-urun4{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScF6KagvD-GInSerc9UCXJ4Qh3Jq75yoc6Lw&usqp=CAU);
+    width: 30vh;
+    height: 30vh;
+}
+.card-text{
+    margin: 20px 30px 20px 30px;
+    font-size: 0,875em;
+}
+button{
+    border: none;
+    background: #8607FE;
+    color: #fff;
+    height: 10vh;
+}
+@media screen and (max-width: 1200px) {
+    .urun{
+        text-align: center;
+        margin: 5vh auto 5vh auto;
+    }
+    button{
+        display: none;
+    }
+    .urun-kutusu{
+        flex-direction: column;
+    }
+    .kart-p{
+        width: 90vw;
+    }
+}
