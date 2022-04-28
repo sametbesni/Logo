@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <script>window.console = window.console || function(t) {};</script>
+    <script>
+          if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+          }
+    </script>
+
+</head>
+<body>
+    <div id="login-logo">
+        <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png" alt="">
+      </div>
+      <div id="box">
+        <h1>Giriş</h1>
+        <span class="close-button">
+          <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png" alt="">
+        </span>
+        <form action="">
+          <input type="email" name="email" placeholder="E-mail">
+          <input type="password" name="pass" placeholder="Şifre">
+          <a href="#">Giriş Yap</a>
+          <div id="remember-box">
+            <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked">
+            <span id="remember">Beni Unutma</span>
+            <span id="forgotten">Şifremi Unuttum</span>
+          </div>
+        </form>
+      </div>
+      <div id="forgotten-box">
+        <h1>Şifre Yenileme</h1>
+        <span class="close-button">
+          <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png" alt="">
+        </span>
+        <form action="">
+          <input type="email" name="email" placeholder="E-mail">
+          <a href="#" class="new-button">Gönder</a>
+        </form>
+      </div>
+
+      <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+      <script id="rendered-js">
+            $('#login-logo').click(function () {
+              $('#login-logo').fadeOut("slow", function () {
+                $('#box').fadeIn();
+                TweenMax.from('#box', .4, { scale: 0, ease: Sine.easeInOut });
+                TweenMax.to("#box", .4, { scale: 1, ease: Sine.easeInOut });
+              });
+            });
+
+            $('.close-button').click(function () {
+              TweenMax.from('#box', .4, { scale: 1, ease: Sine.easeInOut });
+              TweenMax.to("#box", .4, { left: "0px", scale: 0, ease: Sine.easeInOut });
+              $('#box, #forgotten-box').fadeOut(800, function () {
+                $('#login-logo').fadeIn(800);
+              });
+            });
+
+            $('#forgotten').click(function () {
+              $('#box').fadeOut(function () {
+                $('#forgotten-box').fadeIn();
+              });
+            });
+      </script>
+
+
+
+</body>
+</html>
